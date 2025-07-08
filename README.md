@@ -1,6 +1,6 @@
 # Naturalist - Premium Chocolate Experience
 
-![Website Preview](../aa.jpg) <!-- Use relative path to go one folder up -->
+![Website Preview](./aa.jpg) <!-- Use relative path to go one folder up -->
 
 A visually stunning website for Naturalist chocolates featuring immersive GSAP animations and responsive design.
 
