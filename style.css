@@ -1,0 +1,167 @@
+/* Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "EB Garamond", serif;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    overflow-x: hidden;
+}
+
+body::-webkit-scrollbar {
+    display: none;
+}
+
+/* Navigation */
+nav {
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 10vh;
+    padding: 0 5%;
+    z-index: 99;
+}
+
+nav a, nav i {
+    font-size: clamp(14px, 1.5vw, 18px);
+    text-decoration: none;
+    color: white;
+}
+
+.cntr-nav {
+    display: flex;
+    gap: clamp(15px, 3vw, 30px);
+}
+
+/* Header Section */
+.header {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100vh;
+    background-image: url(Assets/bg.png);
+    background-size: cover;
+    background-position: center;
+}
+
+.header h1 {
+    font-size: clamp(60px, 18vw, 180px);
+    color: #fff;
+    text-align: center;
+    z-index: 1;
+}
+
+/* Image Positioning */
+.header img {
+    position: absolute;
+    z-index: 2;
+    transition: all cubic-bezier(0.19, 1, 0.22, 1) 0.5s;
+}
+
+#can {
+    width: clamp(150px, 35%, 350px);
+}
+
+#choclate {
+    top: 8%;
+    left: 42%;
+    width: clamp(100px, 25%, 250px);
+}
+
+#choclate2 {
+    width: clamp(60px, 15%, 150px);
+    top: 70%;
+    right: 35%;
+}
+
+#almod {
+    top: 10%;
+    left: 5%;
+    width: clamp(30px, 7%, 70px);
+    transform: rotate(60deg);
+}
+
+#almod2 {
+    top: 70%;
+    left: 80%;
+    width: clamp(40px, 10%, 100px);
+    transform: rotate(-90deg);
+}
+
+/* About Section */
+.about {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    min-height: 100vh;
+    background-image: linear-gradient(90deg, #a9774e, #864831, #402014);
+    padding: 10vh 5%;
+}
+
+.about-left, .about-right {
+    width: 100%;
+    padding: 5% 0;
+}
+
+.about-left img {
+    width: 100%;
+    max-width: 500px;
+    margin: 0 auto;
+    display: block;
+}
+
+.about-right h1 {
+    color: #fff;
+    font-size: clamp(32px, 5vw, 60px);
+    margin-bottom: 20px;
+}
+
+.about-right p {
+    font-size: clamp(14px, 1.6vw, 18px);
+    color: #fff;
+    width: 100%;
+    max-width: 800px;
+    line-height: 1.6;
+}
+
+/* Product Section */
+.product {
+    width: 100%;
+    min-height: 100vh;
+}
+
+.product img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Media Queries */
+@media (min-width: 768px) {
+    .about {
+        flex-direction: row;
+    }
+    
+    .about-left, .about-right {
+        width: 50%;
+        padding: 0 5%;
+    }
+    
+    .about-left {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+    
+    .about-left img {
+        margin-top: 20vh;
+    }
+}
